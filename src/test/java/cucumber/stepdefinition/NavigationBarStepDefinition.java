@@ -10,14 +10,13 @@ import io.cucumber.java.After;
 import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
 import io.cucumber.java.BeforeAll;
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class NavigationBarStepDefinition {
 	
-	private static WebDriver driver = null;
+	private WebDriver driver = null;
 
 	
 	@BeforeAll
@@ -30,11 +29,11 @@ public class NavigationBarStepDefinition {
 		System.out.println("End");
 	}
 	@Before
-	public static void beforeEach() {
+	public void beforeEach() {
 		driver = new EdgeDriver();
 	}
 	@After
-	public static void afterEach() {
+	public void afterEach() {
 		driver.quit();
 	}
 	
